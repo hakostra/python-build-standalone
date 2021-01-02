@@ -54,6 +54,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Download pythonbuild Executable
+        uses: actions/download-artifact@v2
+        with:
+          name: pythonbuild
+
+      - name: Test
+        shell: powershell
+        run: |
+          .\pythonbuild.exe
+
       - name: Set up Cygwin
         uses: egor-tensin/setup-cygwin@f86ccb21e7a2ba792c837fb9a2b267a9d6335531
         with:
@@ -64,11 +74,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-
-      - name: Download pythonbuild Executable
-        uses: actions/download-artifact@v2
-        with:
-          name: pythonbuild
 
       # We need to do this before we activate the VC++ environment or else binary packages
       # don't get compiled properly.
