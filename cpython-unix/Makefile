@@ -47,7 +47,7 @@ ifeq ($(HOST_PLATFORM),linux64)
     NEED_GDBM := 1
     NEED_GETTEXT :=
     NEED_X11 := 1
-    NEED_READLINE := 1
+    NEED_READLINE :=
     NEED_TIX := 1
 endif
 

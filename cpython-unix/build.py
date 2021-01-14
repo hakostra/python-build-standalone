@@ -731,7 +731,8 @@ def build_cpython(
 
         readline = host_platform != "macos"
         if readline:
-            packages.add("readline")
+            # packages.add("readline")
+            pass
 
         if host_platform == "linux64":
             packages |= {"libX11", "libXau", "libxcb", "xorgproto"}

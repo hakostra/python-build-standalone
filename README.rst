@@ -2,5 +2,7 @@
 Python Standalone Builds
 ========================
 
-See the docs in ``docs/`` or online at
-https://python-build-standalone.readthedocs.io/.
+This is a fork of indygreg/python-build-standalone to do the necessary
+modifications to allow linking Python against libedit instead of readline.
+
+This repo is not regularly maintained.
